@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:component xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+
+	<div class="control-group">
+		<div class="control-label">
+			<h:outputLabel value="Nome" for="inputTextNome" />
+		</div>
+		<div class="controls">
+			<h:inputText value="#{equipeAction.equipe.nome}" id="inputTextNome" />
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="control-label">
+			<h:outputLabel value="Data Fundacao" for="inputTextDataFundacao" />
+		</div>
+		<div class="controls">
+			<h:inputText value="#{equipeAction.equipe.dataFundacao}"
+				id="inputTextDataFundacao" />
+		</div>
+	</div>
+
+</ui:component>

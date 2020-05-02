@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head></h:head>
+<body>
+
+	<h:form>
+		<h:panelGroup>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Nome:" for="nome" />
+				<h:inputText id="nome" value="#{pilotoController.piloto.nome}" />
+			</h:panelGrid>
+
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Licensa:" for="licensa" />
+				<h:inputText id="licensa" value="#{pilotoController.piloto.licensa}" />
+			</h:panelGrid>
+
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Data Nascimento:" for="dtNascimento" />
+				<h:inputText id="dtNascimento"
+					value="#{pilotoController.piloto.dataNascimento}" maxlength="10"
+					size="10">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:inputText>
+			</h:panelGrid>
+
+			<h:panelGrid columns="2">
+				<h:commandButton value="Salvar"
+					action="#{pilotoController.salvar()}" />
+				<h:commandButton value="Limapar" type="reset" />
+			</h:panelGrid>
+		</h:panelGroup>
+	</h:form>
+
+</body>
+</html>

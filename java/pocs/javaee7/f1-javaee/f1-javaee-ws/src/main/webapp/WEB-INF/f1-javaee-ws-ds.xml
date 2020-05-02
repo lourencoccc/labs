@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
+
+	<!-- H2 em Memoria -->
+	<datasource jndi-name="java:jboss/datasources/F1DS"
+		pool-name="{artifactId}" enabled="true" use-java-context="true">
+		<connection-url>jdbc:h2:mem:f1;INIT=create schema if not exists
+			f1;DB_CLOSE_DELAY=-1
+		</connection-url>
+		<driver>h2</driver>
+		<security>
+			<user-name>sa</user-name>
+			<password>sa</password>
+		</security>
+	</datasource>
+
+	<!-- Postgre Local -->
+	<!-- <datasource jta="true" jndi-name="java:jboss/datasources/F1DS" -->
+	<!-- pool-name="F1DS_pool" enabled="true" use-java-context="true" use-ccm="true"> -->
+	<!-- <connection-url>jdbc:postgresql://localhost:5432/f1</connection-url> -->
+	<!-- <driver>postgresql</driver> -->
+	<!-- <pool> -->
+	<!-- <prefill>false</prefill> -->
+	<!-- <use-strict-min>false</use-strict-min> -->
+	<!-- <flush-strategy>FailingConnectionOnly</flush-strategy> -->
+	<!-- </pool> -->
+	<!-- <security> -->
+	<!-- <user-name>postgres</user-name> -->
+	<!-- <password>postgres</password> -->
+	<!-- </security> -->
+	<!-- </datasource> -->
+
+
+</datasources>
+ 

@@ -1,0 +1,12 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'tutorjava8.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  testCompile: "org.apache.groovy:groovy-all:"
+}

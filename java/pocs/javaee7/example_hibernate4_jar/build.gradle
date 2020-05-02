@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin:'application'
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.9'
+}
+version=1.0
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        name 'jboss-nexus'
+        url "http://repository.jboss.org/nexus/content/groups/public/"
+    }
+    
+}
+
+mainClassName = "org.jboss.weld.environment.se.StartMain"
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.2.2'
+    compile 'org.hibernate:hibernate-core:4.3.1.Final'
+    compile 'org.jboss.weld.se:weld-se:2.0.5.Final'
+    //compile 'org.jboss.weld:weld-build-config:2.0.0.Beta5'
+    //compile 'javax.enterprise:cdi-api:1.1'
+    compile 'org.jboss.spec:jboss-javaee-7.0:1.0.0.Final'
+    compile 'postgresql:postgresql:9.1-901-1.jdbc4'
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+
+}
+
+
+jar {
+    manifest {
+        attributes("Implementation-Title": "Example Hibernate4 Jar", "Implementation-Version": version)
+    }
+}
+
+
+
+

@@ -1,0 +1,15 @@
+apply plugin: "groovy"
+apply plugin: "application"
+
+mainClassName = 'demojavafx.HelloMain'
+
+repositories {
+    mavenCentral()
+}
+
+task wrapper(type: Wrapper){
+    gradleVersion = '2.3'
+}
+
+dependencies {
+}

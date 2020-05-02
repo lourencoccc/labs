@@ -1,0 +1,19 @@
+apply plugin: "java"
+apply plugin: "application"
+apply plugin: "idea"
+
+repositories {
+    mavenCentral()
+}
+
+
+mainClassName = 'tutorial.MainApp'
+
+task wrapper(type: Wrapper){
+    gradleVersion = '2.3'
+}
+
+
+dependencies {
+}
+
