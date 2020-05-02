@@ -1,0 +1,38 @@
+apply plugin: 'cpp'
+
+
+model {
+    buildTypes {
+        debug
+        release
+    }
+   /* plataforms {
+        X86 { architecture "x86" }
+        X64 { architecture "x86_64"}
+        itanium { architecture "ia-64" }
+    }*/
+    flavors{
+        community
+        enterprise
+    }
+    components {
+        hello(NativeLibrarySpec) {
+            binaries.all {
+                if (flavor == flavors.enterprise) {
+                    cppCompiler.define "ENTERPRISE"
+                }
+            }
+        }
+        main(NativeExecutableSpec){
+            binaries.all {
+                lib library: "hello", linkage: 'static' 
+            }
+        }
+    
+        }
+    
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.6'
+}

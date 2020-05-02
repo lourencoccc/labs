@@ -1,0 +1,9 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+mainClassName = "org.histocv.app.Main"
+
+dependencies {
+    compile project(':histocv-lib-java')
+}
