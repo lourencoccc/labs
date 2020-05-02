@@ -1,0 +1,17 @@
+{
+  "name": "hello_cpp_addon",
+  "version": "0.0.1",
+  "description": "Node.js Addons Example #1",
+  "main": "index.html",
+  "private": true,
+  "dependencies": {
+    "nan": "^2.4.0"
+  },
+  "scripts": {
+    "test": "node hello.js"
+  },
+  "gypfile": true,
+  "devDependencies": {
+    "electron-rebuild": "^1.2.0"
+  }
+}

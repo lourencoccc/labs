@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 2.9.2 (Jython 2.7.0 on java1.8.0_45)" generated="20151016 17:41:53.458">
+<suite source="C:\Users\joao_lourenco\dev\lab-test-tools\demo-app-test-robot\example.txt" name="Example" id="s1">
+<kw type="setup" name="Start Test Application">
+<kw library="SwingLibrary" name="Start Application">
+<doc>Alias for `Launch Application` keyword</doc>
+<arguments>
+<arg>demoapp.TodoListApp</arg>
+</arguments>
+<status endtime="20151016 17:41:54.483" starttime="20151016 17:41:54.423" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Select Window">
+<doc>Selects a window as current context and sets focus to it.</doc>
+<arguments>
+<arg>Todo List</arg>
+</arguments>
+<status endtime="20151016 17:41:54.605" starttime="20151016 17:41:54.485" status="PASS"></status>
+</kw>
+<status endtime="20151016 17:41:54.606" starttime="20151016 17:41:54.419" status="PASS"></status>
+</kw>
+<test name="Test Add Todo Item" id="s1-t1">
+<kw name="Insert Todo Item buy milk">
+<kw library="SwingLibrary" name="Insert Into Text Field">
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<arguments>
+<arg>description</arg>
+<arg>${arg}</arg>
+</arguments>
+<status endtime="20151016 17:41:54.644" starttime="20151016 17:41:54.613" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Push Button">
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<arguments>
+<arg>add</arg>
+</arguments>
+<status endtime="20151016 17:41:54.666" starttime="20151016 17:41:54.645" status="PASS"></status>
+</kw>
+<status endtime="20151016 17:41:54.668" starttime="20151016 17:41:54.611" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Select From List">
+<doc>Selects an item from the list.</doc>
+<arguments>
+<arg>todolist</arg>
+<arg>0</arg>
+</arguments>
+<status endtime="20151016 17:41:54.694" starttime="20151016 17:41:54.669" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Get Selected Value From List">
+<doc>Returns the item that's currently selected in the list.</doc>
+<arguments>
+<arg>todolist</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg level="INFO" timestamp="20151016 17:41:54.709">${item} = buy milk</msg>
+<status endtime="20151016 17:41:54.710" starttime="20151016 17:41:54.696" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>buy milk</arg>
+</arguments>
+<status endtime="20151016 17:41:54.714" starttime="20151016 17:41:54.711" status="PASS"></status>
+</kw>
+<kw library="LabViewLibrary" name="Labview Send Message">
+<arguments>
+<arg>olalalalalal</arg>
+</arguments>
+<msg level="INFO" timestamp="20151016 17:41:54.718">Keyword labview send message 'olalalalalal'.</msg>
+<status endtime="20151016 17:41:54.719" starttime="20151016 17:41:54.716" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Push Button">
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<arguments>
+<arg>delete</arg>
+</arguments>
+<status endtime="20151016 17:41:54.733" starttime="20151016 17:41:54.720" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20151016 17:41:54.735" starttime="20151016 17:41:54.607" status="PASS"></status>
+</test>
+<test name="Test Add Todo Item PadTec" id="s1-t2">
+<kw library="SwingLibrary" name="Insert Into Text Field">
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<arguments>
+<arg>description</arg>
+<arg>Projeto PadTec</arg>
+</arguments>
+<status endtime="20151016 17:41:54.749" starttime="20151016 17:41:54.741" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Push Button">
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<arguments>
+<arg>add</arg>
+</arguments>
+<status endtime="20151016 17:41:54.761" starttime="20151016 17:41:54.750" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Select From List">
+<doc>Selects an item from the list.</doc>
+<arguments>
+<arg>todolist</arg>
+<arg>0</arg>
+</arguments>
+<status endtime="20151016 17:41:54.769" starttime="20151016 17:41:54.762" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Get Selected Value From List">
+<doc>Returns the item that's currently selected in the list.</doc>
+<arguments>
+<arg>todolist</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg level="INFO" timestamp="20151016 17:41:54.776">${item} = Projeto PadTec</msg>
+<status endtime="20151016 17:41:54.776" starttime="20151016 17:41:54.771" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>Projeto PadTec</arg>
+</arguments>
+<status endtime="20151016 17:41:54.781" starttime="20151016 17:41:54.778" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Push Button">
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<arguments>
+<arg>delete</arg>
+</arguments>
+<status endtime="20151016 17:41:54.793" starttime="20151016 17:41:54.782" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20151016 17:41:54.794" starttime="20151016 17:41:54.738" status="PASS"></status>
+</test>
+<test name="Test Delete Todo Item" id="s1-t3">
+<kw name="Insert Todo Item to be deleted">
+<kw library="SwingLibrary" name="Insert Into Text Field">
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<arguments>
+<arg>description</arg>
+<arg>${arg}</arg>
+</arguments>
+<status endtime="20151016 17:41:54.810" starttime="20151016 17:41:54.804" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Push Button">
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<arguments>
+<arg>add</arg>
+</arguments>
+<status endtime="20151016 17:41:54.820" starttime="20151016 17:41:54.811" status="PASS"></status>
+</kw>
+<status endtime="20151016 17:41:54.821" starttime="20151016 17:41:54.802" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Select From List">
+<doc>Selects an item from the list.</doc>
+<arguments>
+<arg>todolist</arg>
+<arg>0</arg>
+</arguments>
+<status endtime="20151016 17:41:54.829" starttime="20151016 17:41:54.822" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Push Button">
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<arguments>
+<arg>delete</arg>
+</arguments>
+<status endtime="20151016 17:41:54.853" starttime="20151016 17:41:54.830" status="PASS"></status>
+</kw>
+<kw library="SwingLibrary" name="Get List Item Count">
+<doc>Returns the number of items contained in list.</doc>
+<arguments>
+<arg>todolist</arg>
+</arguments>
+<assign>
+<var>${items}</var>
+</assign>
+<msg level="INFO" timestamp="20151016 17:41:54.860">${items} = 0</msg>
+<status endtime="20151016 17:41:54.862" starttime="20151016 17:41:54.856" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal As Numbers">
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<arguments>
+<arg>${items}</arg>
+<arg>0</arg>
+</arguments>
+<msg level="INFO" timestamp="20151016 17:41:54.866">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status endtime="20151016 17:41:54.867" starttime="20151016 17:41:54.863" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20151016 17:41:54.868" starttime="20151016 17:41:54.798" status="PASS"></status>
+</test>
+<status endtime="20151016 17:41:54.871" starttime="20151016 17:41:53.474" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" name="Example" id="s1">Example</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

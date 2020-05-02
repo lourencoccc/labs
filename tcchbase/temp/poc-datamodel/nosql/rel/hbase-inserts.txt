@@ -1,0 +1,181 @@
+
+
+#lojas
+put 'rel:loja', 1, 'nome', 'Fortaleza'
+put 'rel:loja', 2, 'nome', 'Iguatu'
+
+#vendedores
+put 'rel:vendedor', 1, 'nome', 'João'
+put 'rel:vendedor', 1, 'cpf', '03215237849'
+put 'rel:vendedor', 1, 'loja_id', 1
+put 'rel:vendedor', 2, 'nome', 'Jully'
+put 'rel:vendedor', 2, 'cpf', '34745135670'
+put 'rel:vendedor', 2, 'loja_id', 1
+put 'rel:vendedor', 3, 'nome', 'Heitor'
+put 'rel:vendedor', 3, 'cpf', '62641425572'
+put 'rel:vendedor', 3, 'loja_id', 2
+put 'rel:vendedor', 4, 'nome', 'Rose'
+put 'rel:vendedor', 4, 'cpf', '28476291493'
+put 'rel:vendedor', 4, 'loja_id', 2
+
+#clientes
+put 'rel:cliente', 1, 'cpf', '33660454427'
+put 'rel:cliente', 1, 'nome', 'Moises'
+put 'rel:cliente', 1, 'email', 'moises@email.com'
+put 'rel:cliente', 2, 'cpf', '18737341740' 
+put 'rel:cliente', 2, 'nome', 'Cicero'
+put 'rel:cliente', 2, 'email', 'cicero@email.com'
+put 'rel:cliente', 3, 'cpf', '23174124280'
+put 'rel:cliente', 3, 'nome', 'Ivanilda'
+put 'rel:cliente', 3, 'email', 'ivanilda@email.com'
+put 'rel:cliente', 4, 'cpf', '25965562276'
+put 'rel:cliente', 4, 'nome', 'Joana'
+put 'rel:cliente', 4, 'email', 'joana@email.com'
+put 'rel:cliente', 5, 'cpf', '30741376652'
+put 'rel:cliente', 5, 'nome', 'Silvana'
+put 'rel:cliente', 5, 'email', 'silvana@email.com'
+put 'rel:cliente', 6, 'cpf', '90376573112'
+put 'rel:cliente', 6, 'nome', 'Alexandre'
+put 'rel:cliente', 6, 'email', 'alexandre@email.com'
+put 'rel:cliente', 7, 'cpf', '77577730084'
+put 'rel:cliente', 7, 'nome', 'Luan'
+put 'rel:cliente', 7, 'email', 'luan@email.com'
+put 'rel:cliente', 8, 'cpf', '35308654867'
+put 'rel:cliente', 8,'nome', 'Alice'
+put 'rel:cliente', 8,'email', 'alice@email.com'
+put 'rel:cliente', 9, 'cpf', '61097686264'
+put 'rel:cliente', 9, 'nome', 'Eduardo'
+put 'rel:cliente', 9, 'email', 'eduardo@email.com'
+put 'rel:cliente', 10, 'cpf', '27750542183'
+put 'rel:cliente', 10, 'nome', 'Junior'
+put 'rel:cliente', 10, 'email', 'junior@email.com'
+
+#vendas 'vendedor_id','cliente_id', 'data'
+#loja 1, vendedor 1
+put 'rel:venda', 1, 'vendedor_id', 1
+put 'rel:venda', 1, 'cliente_id', 3
+put 'rel:venda', 1, 'data', '2015-11-10 10:00'
+put 'rel:venda', 2, 'vendedor_id', 1
+put 'rel:venda', 2, 'cliente_id', 4
+put 'rel:venda', 2, 'data', '2015-11-10 13:00'
+put 'rel:venda', 3, 'vendedor_id', 1
+put 'rel:venda', 3, 'cliente_id', 3
+put 'rel:venda', 3, 'data', '2015-11-11 17:00'
+#loja 1, vendedor 2
+put 'rel:venda', 4, 'vendedor_id', 2
+put 'rel:venda', 4, 'cliente_id', 5
+put 'rel:venda', 4, 'data', '2015-11-10 09:00'
+#loja 2, vendedor 3
+put 'rel:venda', 5, 'vendedor_id', 3
+put 'rel:venda', 5, 'cliente_id', 8
+put 'rel:venda', 5, 'data', '2015-11-10 14:00'
+put 'rel:venda', 6, 'vendedor_id', 3
+put 'rel:venda', 6, 'cliente_id', 9
+put 'rel:venda', 6, 'data', '2015-11-10 16:00'
+#loja 2, vendedor 4
+put 'rel:venda', 7, 'vendedor_id', 4
+put 'rel:venda', 7, 'cliente_id', 7
+put 'rel:venda', 7, 'data', '2015-11-10 10:00'
+put 'rel:venda', 8, 'vendedor_id', 4
+put 'rel:venda', 8, 'cliente_id', 3
+put 'rel:venda', 8, 'data', '2015-11-10 12:00'
+put 'rel:venda', 9, 'vendedor_id', 4
+put 'rel:venda', 9, 'cliente_id', 6
+put 'rel:venda', 9, 'data', '2015-11-10 14:00'
+put 'rel:venda', 10, 'vendedor_id', 4
+put 'rel:venda', 10, 'cliente_id', 2
+put 'rel:venda', 10, 'data', '2015-11-10 17:00'
+
+#produtos
+put 'rel:produto', 1, 'nome', 'monitor'
+put 'rel:produto', 2, 'nome', 'desktop'
+put 'rel:produto', 3, 'nome', 'notebook'
+put 'rel:produto', 4, 'nome', 'impressora'
+put 'rel:produto', 5, 'nome', 'mouse'
+put 'rel:produto', 6, 'nome', 'pendrive'
+put 'rel:produto', 7, 'nome', 'sdcard'
+put 'rel:produto', 8, 'nome', 'teclado'
+put 'rel:produto', 9, 'nome', 'smartphone'
+put 'rel:produto', 10, 'nome', 'webcam'
+
+#produtos da venda 'venda_id', 'produto_id', 'quantidade', 'valor_unidade', 
+#loja 1, vendedor 1, venda 1,2,3 
+put 'rel:venda_produto', '11', 'venda_id', 1
+put 'rel:venda_produto', '11', 'produto_id', 1
+put 'rel:venda_produto', '11', 'quantidade', 2
+put 'rel:venda_produto', '11', 'valor_unidade', 395.99
+put 'rel:venda_produto', '25', 'venda_id', 2
+put 'rel:venda_produto', '25', 'produto_id', 5
+put 'rel:venda_produto', '25', 'quantidade', 1
+put 'rel:venda_produto', '25', 'valor_unidade', 59.00
+put 'rel:venda_produto', '37', 'venda_id', 3
+put 'rel:venda_produto', '37', 'produto_id', 7
+put 'rel:venda_produto', '37', 'quantidade', 3
+put 'rel:venda_produto', '37', 'valor_unidade', 35.50
+put 'rel:venda_produto', '39', 'venda_id', 3
+put 'rel:venda_produto', '39', 'produto_id', 9
+put 'rel:venda_produto', '39', 'quantidade', 1
+put 'rel:venda_produto', '39', 'valor_unidade', 600.00
+#loja 1, vendedor 2, venda 4
+put 'rel:venda_produto', '46', 'venda_id', 4
+put 'rel:venda_produto', '46', 'produto_id', 6
+put 'rel:venda_produto', '46', 'quantidade', 2
+put 'rel:venda_produto', '46', 'valor_unidade', 35.50
+put 'rel:venda_produto', '410', 'venda_id', 4
+put 'rel:venda_produto', '410', 'produto_id', 10
+put 'rel:venda_produto', '410', 'quantidade', 1
+put 'rel:venda_produto', '410', 'valor_unidade', 88.00
+put 'rel:venda_produto', '48', 'venda_id', 4
+put 'rel:venda_produto', '48', 'produto_id', 8
+put 'rel:venda_produto', '48', 'quantidade', 1
+put 'rel:venda_produto', '48', 'valor_unidade', 120.00
+#loja 2, vendedor 3, venda 5,6
+put 'rel:venda_produto', '56', 'venda_id', 5
+put 'rel:venda_produto', '56', 'produto_id', 6
+put 'rel:venda_produto', '56', 'quantidade', 1
+put 'rel:venda_produto', '56', 'valor_unidade', 35.50
+put 'rel:venda_produto', '53', 'venda_id', 5
+put 'rel:venda_produto', '53', 'produto_id', 3
+put 'rel:venda_produto', '53', 'quantidade', 1
+put 'rel:venda_produto', '53', 'valor_unidade', 1250.90
+put 'rel:venda_produto', '64', 'venda_id', 6
+put 'rel:venda_produto', '64', 'produto_id', 4
+put 'rel:venda_produto', '64', 'quantidade', 2
+put 'rel:venda_produto', '64', 'valor_unidade', 346.00
+put 'rel:venda_produto', '69', 'venda_id', 6
+put 'rel:venda_produto', '69', 'produto_id', 9
+put 'rel:venda_produto', '69', 'quantidade', 1
+put 'rel:venda_produto', '69', 'valor_unidade', 600.00
+#loja 2, vendedor 4, venda 7,8,9,10
+put 'rel:venda_produto', '72', 'venda_id', 7
+put 'rel:venda_produto', '72', 'produto_id', 2
+put 'rel:venda_produto', '72', 'quantidade', 1
+put 'rel:venda_produto', '72', 'valor_unidade', 900.90
+put 'rel:venda_produto', '71', 'venda_id', 7
+put 'rel:venda_produto', '71', 'produto_id', 1
+put 'rel:venda_produto', '71', 'quantidade', 1
+put 'rel:venda_produto', '71', 'valor_unidade', 350.90
+put 'rel:venda_produto', '75', 'venda_id', 7
+put 'rel:venda_produto', '75', 'produto_id', 5
+put 'rel:venda_produto', '75', 'quantidade', 1
+put 'rel:venda_produto', '75', 'valor_unidade', 50.00
+put 'rel:venda_produto', '86', 'venda_id', 8
+put 'rel:venda_produto', '86', 'produto_id', 6
+put 'rel:venda_produto', '86', 'quantidade', 1
+put 'rel:venda_produto', '86', 'valor_unidade', 600.00
+put 'rel:venda_produto', '84', 'venda_id', 8
+put 'rel:venda_produto', '84', 'produto_id', 4
+put 'rel:venda_produto', '84', 'quantidade', 2
+put 'rel:venda_produto', '84', 'valor_unidade', 28.00
+put 'rel:venda_produto', '97', 'venda_id', 9
+put 'rel:venda_produto', '97', 'produto_id', 7
+put 'rel:venda_produto', '97', 'quantidade', 3
+put 'rel:venda_produto', '97', 'valor_unidade', 35.50
+put 'rel:venda_produto', '98', 'venda_id', 9
+put 'rel:venda_produto', '98', 'produto_id', 8
+put 'rel:venda_produto', '98', 'quantidade', 2
+put 'rel:venda_produto', '98', 'valor_unidade', 112.00
+put 'rel:venda_produto', '104', 'venda_id', 10
+put 'rel:venda_produto', '104', 'produto_id', 4
+put 'rel:venda_produto', '104', 'quantidade', 1
+put 'rel:venda_produto', '104', 'valor_unidade', 346.00

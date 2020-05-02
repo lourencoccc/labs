@@ -1,0 +1,11 @@
+nameSpace: &space query
+tables:
+  - name: q1_post_history_by_postid
+    nameSpace: *space
+    sourceFile: PostHistory.xml
+    keyField: Id
+    rowKeys:
+      - PostId
+      - Id
+    cfName: post_history
+    cassandraColumnTypes:

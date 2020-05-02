@@ -1,0 +1,18 @@
+# Data configuration
+version: 1.0
+type: AGGREGATE
+tables:
+  - name: Posts
+    source: Posts.xml
+    rowKey: Id
+  - name: PostHistory
+    source: PostHistory.xml
+    rowKey: Id
+  - name: Posts_PostHistory
+    source: Posts.xml
+    rowKey: Id
+    hasMany:
+      - name: PostHistory
+        source: PostHistory.xml
+        rowKey: Id
+        rowKeyRef: PostId

@@ -1,0 +1,2 @@
+create 'query:q4_posts_votes_by_userid', 'votes'
+alter 'query:q4_posts_votes_by_userid', 'posts'

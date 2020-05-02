@@ -1,0 +1,2 @@
+create 'query:q3_posts_by_posthistorytypeid', 'post_history'
+alter 'query:q3_posts_by_posthistorytypeid', 'posts'

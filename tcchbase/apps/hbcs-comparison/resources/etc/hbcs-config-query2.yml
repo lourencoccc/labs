@@ -1,0 +1,18 @@
+nameSpace: &space query
+tables:
+  - name: q2_posts_scores_by_userid
+    nameSpace: *space
+    sourceFile: Posts.xml
+    keyField: Id
+    rowKeys:
+      - OwnerUserId
+      - Id
+    cfName: posts
+    columns:
+      - Id
+      - OwnerUserId
+      - Score
+      - ViewCount
+    cassandraColumnTypes:
+      posts_Score: int
+      posts_ViewCount: int

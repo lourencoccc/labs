@@ -1,0 +1,2 @@
+include "hbcs-app", "hbcs-common", "hbcs-hbase", "hbcs-cassandra"
+

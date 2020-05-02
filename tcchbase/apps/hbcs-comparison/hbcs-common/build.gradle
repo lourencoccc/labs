@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+group = 'com.cloudec'
+version = '0.0.1'
+
+compileJava {
+  options.compilerArgs << '-deprecation'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.yaml:snakeyaml:1.18'
+  compile 'org.fusesource.leveldbjni:leveldbjni-all:1.8'
+  compile 'com.h2database:h2:1.4.195'
+  testCompile 'org.codehaus.groovy:groovy:2.4.9'
+  testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
+}

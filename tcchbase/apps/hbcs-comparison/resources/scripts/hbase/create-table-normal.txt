@@ -1,0 +1,3 @@
+create 'normal:post_history', 'post_history'
+create 'normal:posts', 'posts'
+create 'normal:votes', 'votes'

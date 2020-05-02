@@ -1,0 +1,33 @@
+
+
+1. Instalar python 2.7.10 e jython 2.7.0
+
+Python 2.7.10 - https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi
+Jython 2.7.0 - http://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.0/jython-installer-2.7.0.jar
+
+2. Configurar path do S.Ocom python e jython
+
+Exemplo: Path = C:\Python27;C:\Python27\Scripts;C:\jython2.7.0\bin
+
+3. Instalar Robotframework no python e jython.
+
+C:\Python27\Scripts\pip install robotframework
+C:\jython2.7.0\bin\pip install robotframework
+
+4. Downaload SwingLibrary.
+
+https://github.com/robotframework/SwingLibrary/releases/tag/1.9.5
+
+5. Downloading ferramentas para ispecionar aplicativos java swing.
+
+https://github.com/robotframework/swingexplorer/releases/tag/1.6.0
+
+6. Criar aplicação para ser testada e gerar jar.
+
+7. Criar script de teste com base na documentação
+
+http://robotframework.org/SwingLibrary/SwingLibrary-1.9.5.html
+
+8. Executar script de teste
+
+jybot --outputdir results script.txt

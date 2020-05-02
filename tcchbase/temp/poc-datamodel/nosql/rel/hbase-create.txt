@@ -1,0 +1,26 @@
+
+
+disable 'rel:loja'
+drop 'rel:loja'
+disable 'rel:vendedor'
+drop 'rel:vendedor'
+disable 'rel:produto'
+drop 'rel:produto'
+disable 'rel:cliente'
+drop 'rel:cliente'
+disable 'rel:venda'
+drop 'rel:venda'
+disable 'rel:venda_produto'
+drop 'rel:venda_produto'
+
+
+drop_namespace 'rel'
+
+create_namespace 'rel'
+
+create 'rel:loja', 'nome'
+create 'rel:vendedor', 'nome', 'cpf', 'loja_id'
+create 'rel:produto', 'nome'
+create 'rel:cliente', 'nome', 'cpf', 'email'
+create 'rel:venda', 'vendedor_id','cliente_id', 'data'
+create 'rel:venda_produto', 'venda_id', 'produto_id', 'quantidade', 'valor_unidade'

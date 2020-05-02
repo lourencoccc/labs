@@ -1,0 +1,19 @@
+version 1.2.6
+0 regionsInTransition
+active master:  hbcssrv1:16000 1494546032103
+0 backup masters
+master coprocessors: []
+3 live servers
+    hbcssrv2:16020 1494546033091
+        requestsPerSecond=0.0, numberOfOnlineRegions=1, usedHeapMB=17, maxHeapMB=911, numberOfStores=1, numberOfStorefiles=2, storefileUncompressedSizeMB=0, storefileSizeMB=0, memstoreSizeMB=0, storefileIndexSizeMB=0, readRequestsCount=5, writeRequestsCount=0, rootIndexSizeKB=0, totalStaticIndexSizeKB=0, totalStaticBloomSizeKB=0, totalCompactingKVs=0, currentCompactedKVs=0, compactionProgressPct=NaN, coprocessors=[]
+        "hbase:namespace,,1494449104693.7adf9c79510bc28a8682bb1590a510de."
+            numberOfStores=1, numberOfStorefiles=2, storefileUncompressedSizeMB=0, lastMajorCompactionTimestamp=0, storefileSizeMB=0, memstoreSizeMB=0, storefileIndexSizeMB=0, readRequestsCount=5, writeRequestsCount=0, rootIndexSizeKB=0, totalStaticIndexSizeKB=0, totalStaticBloomSizeKB=0, totalCompactingKVs=0, currentCompactedKVs=0, compactionProgressPct=NaN, completeSequenceId=-1, dataLocality=1.0
+    hbcssrv4:16020 1494546033518
+        requestsPerSecond=0.0, numberOfOnlineRegions=1, usedHeapMB=16, maxHeapMB=911, numberOfStores=1, numberOfStorefiles=1, storefileUncompressedSizeMB=0, storefileSizeMB=0, memstoreSizeMB=0, storefileIndexSizeMB=0, readRequestsCount=0, writeRequestsCount=0, rootIndexSizeKB=0, totalStaticIndexSizeKB=0, totalStaticBloomSizeKB=0, totalCompactingKVs=0, currentCompactedKVs=0, compactionProgressPct=NaN, coprocessors=[]
+        "hbcs:hbcs,,1494458216817.a0359f7ab40119afda18f28e6e5ba1ca."
+            numberOfStores=1, numberOfStorefiles=1, storefileUncompressedSizeMB=0, lastMajorCompactionTimestamp=0, storefileSizeMB=0, memstoreSizeMB=0, storefileIndexSizeMB=0, readRequestsCount=0, writeRequestsCount=0, rootIndexSizeKB=0, totalStaticIndexSizeKB=0, totalStaticBloomSizeKB=0, totalCompactingKVs=0, currentCompactedKVs=0, compactionProgressPct=NaN, completeSequenceId=-1, dataLocality=0.0
+    hbcssrv3:16020 1494546033411
+        requestsPerSecond=0.0, numberOfOnlineRegions=1, usedHeapMB=29, maxHeapMB=911, numberOfStores=1, numberOfStorefiles=1, storefileUncompressedSizeMB=0, storefileSizeMB=0, memstoreSizeMB=0, storefileIndexSizeMB=0, readRequestsCount=11, writeRequestsCount=2, rootIndexSizeKB=0, totalStaticIndexSizeKB=0, totalStaticBloomSizeKB=0, totalCompactingKVs=20, currentCompactedKVs=20, compactionProgressPct=1.0, coprocessors=[MultiRowMutationEndpoint]
+        "hbase:meta,,1"
+            numberOfStores=1, numberOfStorefiles=1, storefileUncompressedSizeMB=0, lastMajorCompactionTimestamp=1494546485945, storefileSizeMB=0, memstoreSizeMB=0, storefileIndexSizeMB=0, readRequestsCount=11, writeRequestsCount=2, rootIndexSizeKB=0, totalStaticIndexSizeKB=0, totalStaticBloomSizeKB=0, totalCompactingKVs=20, currentCompactedKVs=20, compactionProgressPct=1.0, completeSequenceId=43, dataLocality=0.0
+0 dead servers

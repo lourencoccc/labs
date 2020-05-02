@@ -1,0 +1,38 @@
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 192.168.1.111:ssh       192.168.1.100:37294     ESTABLISHED
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ]         DGRAM                    8200     /run/systemd/shutdownd
+unix  7      [ ]         DGRAM                    8205     /run/systemd/journal/dev-log
+unix  5      [ ]         DGRAM                    8214     /run/systemd/journal/socket
+unix  2      [ ]         DGRAM                    8537     /run/systemd/journal/syslog
+unix  2      [ ]         DGRAM                    2041     /run/systemd/notify
+unix  3      [ ]         STREAM     CONNECTED     13640    
+unix  3      [ ]         STREAM     CONNECTED     13629    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     13667    
+unix  3      [ ]         STREAM     CONNECTED     13669    /var/run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    8445     
+unix  3      [ ]         STREAM     CONNECTED     12557    
+unix  3      [ ]         STREAM     CONNECTED     12747    
+unix  3      [ ]         STREAM     CONNECTED     13617    
+unix  3      [ ]         STREAM     CONNECTED     12400    
+unix  3      [ ]         STREAM     CONNECTED     13645    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     12610    
+unix  3      [ ]         STREAM     CONNECTED     13644    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     13641    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    8437     
+unix  2      [ ]         DGRAM                    13937    
+unix  2      [ ]         DGRAM                    12334    
+unix  2      [ ]         DGRAM                    13672    
+unix  3      [ ]         STREAM     CONNECTED     13670    /var/run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    8446     
+unix  3      [ ]         STREAM     CONNECTED     12439    
+unix  2      [ ]         DGRAM                    24965    
+unix  3      [ ]         STREAM     CONNECTED     13668    
+unix  2      [ ]         DGRAM                    8541     
+unix  3      [ ]         STREAM     CONNECTED     12746    
+unix  3      [ ]         STREAM     CONNECTED     12596    
+unix  2      [ ]         DGRAM                    12604    
+unix  3      [ ]         STREAM     CONNECTED     13616    
+unix  2      [ ]         DGRAM                    13756    

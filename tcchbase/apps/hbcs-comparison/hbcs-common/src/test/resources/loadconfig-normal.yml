@@ -1,0 +1,8 @@
+type: NORMAL
+tables:
+  - name: Posts
+    source: Posts.xml
+    rowKey: Id
+  - name: PostHistory
+    source: PostHistory.xml
+    rowKey: Id

@@ -1,0 +1,28 @@
+nameSpace: &space query
+tables:
+  - name: q4_posts_votes_by_userid
+    nameSpace: *space
+    sourceFile: Votes.xml
+    keyField: Id
+    rowKeys:
+      - VoteTypeId
+      - PostId
+      - Id
+    cfName: votes
+    columns:
+      - PostId
+      - Id
+      - VoteTypeId
+      - CreationDate
+    aggregates:
+        - name: posts
+          nameSpace: *space
+          sourceFile: Posts.xml
+          keyField: Id
+          cfName: posts
+          refKeyField: PostId
+          rowKeys:
+            - OwnerUserId
+          columns:
+            - OwnerUserId
+            - Id

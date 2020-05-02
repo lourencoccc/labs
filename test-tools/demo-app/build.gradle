@@ -1,0 +1,10 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+mainClassName = "demoapp.TodoListApp"
+
+repositories {
+    mavenCentral()
+    jcenter()
+}

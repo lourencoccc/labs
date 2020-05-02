@@ -1,0 +1,1 @@
+create 'query:q2_posts_scores_by_userid', 'posts'

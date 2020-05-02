@@ -1,0 +1,48 @@
+
+
+drop 'venda_produto'
+drop 'venda'
+drop 'cliente'
+drop 'produto'
+drop 'vendedor'
+drop 'loja'
+
+create_namespace 'denorm'
+
+create table loja(
+    id integer,
+    nome varchar(255)
+);
+
+create table vendedor(
+    id integer,
+    nome varchar(255),
+    cpf varchar(11),
+    loja_id integer
+);
+
+create table produto(
+    id integer,
+    nome varchar(255)
+);
+
+create table cliente(
+    id integer,
+    cpf varchar(11),
+    nome varchar(255),
+    email varchar(255)
+);
+
+create table venda(
+    id integer,
+    vendedor_id integer,
+    cliente_id integer,
+    data timestamp
+);
+
+create table venda_produto(
+    venda_id integer,
+    produto_id integer,
+    quantidade integer,
+    valor_unidade numeric(19,2)
+);

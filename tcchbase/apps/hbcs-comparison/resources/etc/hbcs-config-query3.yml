@@ -1,0 +1,29 @@
+nameSpace: &space query
+tables:
+  - name: q3_posts_by_posthistorytypeid
+    nameSpace: *space
+    sourceFile: PostHistory.xml
+    keyField: Id
+    rowKeys:
+      - PostHistoryTypeId
+      - PostId
+    cfName: post_history
+    columns:
+      - PostHistoryTypeId
+      - PostId
+      - Id
+    aggregates:
+      - name: posts
+        nameSpace: *space
+        sourceFile: Posts.xml
+        keyField: Id
+        notEmptyColumns:
+          - OwnerUserId
+        cfName: posts
+        refKeyField: PostId
+    cassandraColumnTypes:
+      posts_Score: int
+      posts_ViewCount: int
+      posts_AnswerCount: int
+      posts_CommentCount: int
+      posts_FavoriteCount: int

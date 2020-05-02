@@ -1,0 +1,2 @@
+create_namespace 'normal'
+create_namespace 'query'

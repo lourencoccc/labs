@@ -1,0 +1,6 @@
+create 'query:q1_post_history_by_postid', 'post_history'
+create 'query:q2_posts_scores_by_userid', 'posts'
+create 'query:q3_posts_by_posthistorytypeid', 'post_history'
+alter 'query:q3_posts_by_posthistorytypeid', 'posts'
+create 'query:q4_posts_votes_by_userid', 'votes'
+alter 'query:q4_posts_votes_by_userid', 'posts'

@@ -1,0 +1,467 @@
+hbcssrv1
+    description: Computer
+    width: 64 bits
+    capabilities: smbios-2.6 vsyscall32
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 3711MiB
+     *-cpu
+          product: Intel(R) Core(TM)2 Duo CPU     T6570  @ 2.10GHz
+          vendor: Intel Corp.
+          physical id: 1
+          bus info: cpu@0
+          size: 1200MHz
+          capacity: 2100MHz
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx x86-64 constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority cpufreq
+     *-pci
+          description: Host bridge
+          product: MCP79 Host Bridge
+          vendor: NVIDIA Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: b1
+          width: 32 bits
+          clock: 66MHz
+        *-memory:0 UNCLAIMED
+             description: RAM memory
+             product: MCP79 Memory Controller
+             vendor: NVIDIA Corporation
+             physical id: 0.1
+             bus info: pci@0000:00:00.1
+             version: b1
+             width: 32 bits
+             clock: 66MHz (15.2ns)
+             capabilities: bus_master
+             configuration: latency=0
+        *-isa
+             description: ISA bridge
+             product: MCP79 LPC Bridge
+             vendor: NVIDIA Corporation
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             version: b2
+             width: 32 bits
+             clock: 66MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+             resources: ioport:4f00(size=256)
+        *-memory:1 UNCLAIMED
+             description: RAM memory
+             product: MCP79 Memory Controller
+             vendor: NVIDIA Corporation
+             physical id: 3.1
+             bus info: pci@0000:00:03.1
+             version: b1
+             width: 32 bits
+             clock: 66MHz (15.2ns)
+             configuration: latency=0
+        *-serial
+             description: SMBus
+             product: MCP79 SMBus
+             vendor: NVIDIA Corporation
+             physical id: 3.2
+             bus info: pci@0000:00:03.2
+             version: b1
+             width: 32 bits
+             clock: 66MHz
+             capabilities: pm cap_list
+             configuration: driver=nForce2_smbus latency=0
+             resources: irq:10 ioport:4900(size=64) ioport:4d00(size=64) ioport:4e00(size=64)
+        *-memory:2 UNCLAIMED
+             description: RAM memory
+             product: MCP79 Memory Controller
+             vendor: NVIDIA Corporation
+             physical id: 3.3
+             bus info: pci@0000:00:03.3
+             version: b1
+             width: 32 bits
+             clock: 66MHz (15.2ns)
+             configuration: latency=0
+        *-memory:3 UNCLAIMED
+             description: RAM memory
+             product: MCP79 Memory Controller
+             vendor: NVIDIA Corporation
+             physical id: 3.4
+             bus info: pci@0000:00:03.4
+             version: b1
+             width: 32 bits
+             clock: 66MHz (15.2ns)
+             configuration: latency=0
+        *-processor UNCLAIMED
+             description: Co-processor
+             product: MCP79 Co-processor
+             vendor: NVIDIA Corporation
+             physical id: 3.5
+             bus info: pci@0000:00:03.5
+             version: b1
+             width: 32 bits
+             clock: 66MHz
+             capabilities: bus_master
+             configuration: latency=0 maxlatency=1 mingnt=3
+             resources: memory:fae80000-faefffff
+        *-usb:0
+             description: USB controller
+             product: MCP79 OHCI USB 1.1 Controller
+             vendor: NVIDIA Corporation
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             version: b1
+             width: 32 bits
+             clock: 66MHz
+             capabilities: pm ohci bus_master cap_list
+             configuration: driver=ohci-pci latency=0 maxlatency=1 mingnt=3
+             resources: irq:23 memory:fae7f000-fae7ffff
+           *-usbhost
+                product: OHCI PCI host controller
+                vendor: Linux 3.16.0-4-amd64 ohci_hcd
+                physical id: 1
+                bus info: usb@3
+                logical name: usb3
+                version: 3.16
+                capabilities: usb-1.10
+                configuration: driver=hub slots=7 speed=12Mbit/s
+              *-usb:0
+                   description: Bluetooth wireless interface
+                   product: HP Bluetooth Module
+                   vendor: Broadcom Corp
+                   physical id: 6
+                   bus info: usb@3:6
+                   version: 5.13
+                   serial: 00271387C489
+                   capabilities: bluetooth usb-2.00
+                   configuration: driver=btusb speed=12Mbit/s
+              *-usb:1
+                   description: Human interface device
+                   product: Touchscreen
+                   vendor: NextWindow
+                   physical id: 7
+                   bus info: usb@3:7
+                   version: 0.01
+                   capabilities: usb-1.10
+                   configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
+        *-usb:1
+             description: USB controller
+             product: MCP79 EHCI USB 2.0 Controller
+             vendor: NVIDIA Corporation
+             physical id: 4.1
+             bus info: pci@0000:00:04.1
+             version: b1
+             width: 32 bits
+             clock: 66MHz
+             capabilities: debug pm ehci bus_master cap_list
+             configuration: driver=ehci-pci latency=0 maxlatency=1 mingnt=3
+             resources: irq:22 memory:fae7ec00-fae7ecff
+           *-usbhost
+                product: EHCI Host Controller
+                vendor: Linux 3.16.0-4-amd64 ehci_hcd
+                physical id: 1
+                bus info: usb@1
+                logical name: usb1
+                version: 3.16
+                capabilities: usb-2.00
+                configuration: driver=hub slots=7 speed=480Mbit/s
+              *-usb
+                   description: USB hub
+                   product: USB Hub
+                   vendor: Alcor Micro Corp.
+                   physical id: 3
+                   bus info: usb@1:3
+                   version: 1.00
+                   capabilities: usb-2.00
+                   configuration: driver=hub maxpower=100mA slots=4 speed=480Mbit/s
+                 *-usb
+                      description: Generic USB device
+                      product: eHome Infrared Transceiver
+                      vendor: FINTEK
+                      physical id: 3
+                      bus info: usb@1:3.3
+                      version: 0.01
+                      serial: 88636562727801
+                      capabilities: usb-2.00
+                      configuration: driver=mceusb maxpower=100mA speed=12Mbit/s
+        *-usb:2
+             description: USB controller
+             product: MCP79 OHCI USB 1.1 Controller
+             vendor: NVIDIA Corporation
+             physical id: 6
+             bus info: pci@0000:00:06.0
+             version: b1
+             width: 32 bits
+             clock: 66MHz
+             capabilities: pm ohci bus_master cap_list
+             configuration: driver=ohci-pci latency=0 maxlatency=1 mingnt=3
+             resources: irq:21 memory:fae7d000-fae7dfff
+           *-usbhost
+                product: OHCI PCI host controller
+                vendor: Linux 3.16.0-4-amd64 ohci_hcd
+                physical id: 1
+                bus info: usb@4
+                logical name: usb4
+                version: 3.16
+                capabilities: usb-1.10
+                configuration: driver=hub slots=5 speed=12Mbit/s
+              *-usb
+                   description: Keyboard
+                   product: Dell USB Keyboard
+                   vendor: Dell
+                   physical id: 3
+                   bus info: usb@4:3
+                   version: 3.06
+                   capabilities: usb-1.10
+                   configuration: driver=usbhid maxpower=70mA speed=2Mbit/s
+        *-usb:3
+             description: USB controller
+             product: MCP79 EHCI USB 2.0 Controller
+             vendor: NVIDIA Corporation
+             physical id: 6.1
+             bus info: pci@0000:00:06.1
+             version: b1
+             width: 32 bits
+             clock: 66MHz
+             capabilities: debug pm ehci bus_master cap_list
+             configuration: driver=ehci-pci latency=0 maxlatency=1 mingnt=3
+             resources: irq:20 memory:fae7e800-fae7e8ff
+           *-usbhost
+                product: EHCI Host Controller
+                vendor: Linux 3.16.0-4-amd64 ehci_hcd
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 3.16
+                capabilities: usb-2.00
+                configuration: driver=hub slots=5 speed=480Mbit/s
+              *-usb
+                   description: Video
+                   product: CNF8050
+                   vendor: Chicony Electronics Co., Ltd.
+                   physical id: 1
+                   bus info: usb@2:1
+                   version: 88.03
+                   serial: SN0001
+                   capabilities: usb-2.00
+                   configuration: driver=uvcvideo maxpower=500mA speed=480Mbit/s
+        *-multimedia
+             description: Audio device
+             product: MCP79 High Definition Audio
+             vendor: NVIDIA Corporation
+             physical id: 8
+             bus info: pci@0000:00:08.0
+             version: b1
+             width: 32 bits
+             clock: 66MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=snd_hda_intel latency=0 maxlatency=5 mingnt=2
+             resources: irq:21 memory:fae78000-fae7bfff
+        *-pci:0
+             description: PCI bridge
+             product: MCP79 PCI Bridge
+             vendor: NVIDIA Corporation
+             physical id: 9
+             bus info: pci@0000:00:09.0
+             version: b1
+             width: 32 bits
+             clock: 66MHz
+             capabilities: pci subtractive_decode bus_master cap_list
+        *-storage
+             description: SATA controller
+             product: MCP79 AHCI Controller
+             vendor: NVIDIA Corporation
+             physical id: b
+             bus info: pci@0000:00:0b.0
+             version: b1
+             width: 32 bits
+             clock: 66MHz
+             capabilities: storage pm msi ahci_1.0 bus_master cap_list
+             configuration: driver=ahci latency=0 maxlatency=1 mingnt=3
+             resources: irq:42 ioport:c480(size=8) ioport:c400(size=4) ioport:c080(size=8) ioport:c000(size=4) ioport:bc00(size=16) memory:fae76000-fae77fff
+        *-pci:1
+             description: PCI bridge
+             product: MCP79 PCI Express Bridge
+             vendor: NVIDIA Corporation
+             physical id: c
+             bus info: pci@0000:00:0c.0
+             version: b1
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pm msi pciexpress normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:23
+        *-pci:2
+             description: PCI bridge
+             product: MCP79 PCI Express Bridge
+             vendor: NVIDIA Corporation
+             physical id: 10
+             bus info: pci@0000:00:10.0
+             version: b1
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pm msi normal_decode bus_master cap_list
+             resources: ioport:d000(size=4096) memory:faf00000-fbffffff ioport:e0000000(size=402653184)
+           *-display
+                description: VGA compatible controller
+                product: C79 [GeForce 9300]
+                vendor: NVIDIA Corporation
+                physical id: 0
+                bus info: pci@0000:03:00.0
+                version: b1
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi vga_controller bus_master cap_list rom
+                configuration: driver=nouveau latency=0
+                resources: irq:43 memory:fb000000-fbffffff memory:e0000000-efffffff memory:f6000000-f7ffffff ioport:dc00(size=128) memory:fafe0000-faffffff
+        *-pci:3
+             description: PCI bridge
+             product: MCP79 PCI Express Bridge
+             vendor: NVIDIA Corporation
+             physical id: 15
+             bus info: pci@0000:00:15.0
+             version: b1
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pm msi pciexpress normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:22
+        *-pci:4
+             description: PCI bridge
+             product: MCP79 PCI Express Bridge
+             vendor: NVIDIA Corporation
+             physical id: 16
+             bus info: pci@0000:00:16.0
+             version: b1
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pm msi pciexpress normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:21 ioport:e000(size=4096) memory:fe900000-fe9fffff ioport:f9f00000(size=1048576)
+           *-network
+                description: Ethernet interface
+                product: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+                vendor: Realtek Semiconductor Co., Ltd.
+                physical id: 0
+                bus info: pci@0000:05:00.0
+                logical name: eth0
+                version: 03
+                serial: 18:a9:05:38:17:a2
+                size: 1Gbit/s
+                capacity: 1Gbit/s
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress msix vpd bus_master cap_list rom ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=r8169 driverversion=2.3LK-NAPI duplex=full ip=192.168.1.111 latency=0 link=yes multicast=yes port=MII speed=1Gbit/s
+                resources: irq:40 ioport:e800(size=256) memory:fe9ff000-fe9fffff memory:f9ffc000-f9ffffff memory:fe9c0000-fe9dffff
+        *-pci:5
+             description: PCI bridge
+             product: MCP79 PCI Express Bridge
+             vendor: NVIDIA Corporation
+             physical id: 17
+             bus info: pci@0000:00:17.0
+             version: b1
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pm msi pciexpress normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:20 memory:fea00000-feafffff
+           *-network DISABLED
+                description: Wireless interface
+                product: RT3092 Wireless 802.11n 2T/2R PCIe
+                vendor: Ralink corp.
+                physical id: 0
+                bus info: pci@0000:06:00.0
+                logical name: wlan0
+                version: 00
+                serial: 00:26:82:1c:cf:27
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress bus_master cap_list ethernet physical wireless
+                configuration: broadcast=yes driver=rt2800pci driverversion=3.16.0-4-amd64 firmware=N/A latency=0 link=no multicast=yes wireless=IEEE 802.11bgn
+                resources: irq:17 memory:feaf0000-feafffff
+        *-pci:6
+             description: PCI bridge
+             product: MCP79 PCI Express Bridge
+             vendor: NVIDIA Corporation
+             physical id: 18
+             bus info: pci@0000:00:18.0
+             version: b1
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pm msi pciexpress normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:23 memory:feb00000-febfffff
+           *-firewire
+                description: FireWire (IEEE 1394)
+                product: FW533 [TrueFire] PCIe 1394a Controller
+                vendor: LSI Corporation
+                physical id: 0
+                bus info: pci@0000:07:00.0
+                version: 08
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress ohci bus_master cap_list
+                configuration: driver=firewire_ohci latency=0
+                resources: irq:41 memory:febff000-febfffff
+     *-scsi:0
+          physical id: 2
+          logical name: scsi0
+          capabilities: emulated
+        *-disk
+             description: ATA Disk
+             product: ST3320418AS
+             vendor: Seagate
+             physical id: 0.0.0
+             bus info: scsi@0:0.0.0
+             logical name: /dev/sda
+             version: HP34
+             serial: 5VM83YM3
+             size: 298GiB (320GB)
+             capabilities: partitioned partitioned:dos
+             configuration: ansiversion=5 logicalsectorsize=512 sectorsize=512 signature=43091e17
+           *-volume:0
+                description: EXT4 volume
+                vendor: Linux
+                physical id: 1
+                bus info: scsi@0:0.0.0,1
+                logical name: /dev/sda1
+                logical name: /
+                version: 1.0
+                serial: 2b3afee4-e4aa-4a85-b906-9437ec20bad2
+                size: 290GiB
+                capacity: 290GiB
+                capabilities: primary bootable journaled extended_attributes large_files huge_files dir_nlink extents ext4 ext2 initialized
+                configuration: created=2017-03-06 21:15:28 filesystem=ext4 lastmountpoint=/ modified=2017-05-02 17:47:02 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro,data=ordered mounted=2017-04-24 19:38:24 state=mounted
+           *-volume:1
+                description: Extended partition
+                physical id: 2
+                bus info: scsi@0:0.0.0,2
+                logical name: /dev/sda2
+                size: 7677MiB
+                capacity: 7677MiB
+                capabilities: primary extended partitioned partitioned:extended
+              *-logicalvolume
+                   description: Linux swap / Solaris partition
+                   physical id: 5
+                   logical name: /dev/sda5
+                   capacity: 7677MiB
+                   capabilities: nofs
+     *-scsi:1
+          physical id: 3
+          logical name: scsi2
+          capabilities: emulated
+        *-cdrom
+             description: DVD-RAM writer
+             product: CDDVDW TS-T633P
+             vendor: hp
+             physical id: 0.0.0
+             bus info: scsi@2:0.0.0
+             logical name: /dev/cdrom
+             logical name: /dev/cdrw
+             logical name: /dev/dvd
+             logical name: /dev/dvdrw
+             logical name: /dev/sr0
+             version: H130
+             capabilities: removable audio cd-r cd-rw dvd dvd-r dvd-ram
+             configuration: ansiversion=5 status=open

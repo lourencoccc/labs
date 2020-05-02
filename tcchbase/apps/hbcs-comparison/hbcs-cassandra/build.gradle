@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+mainClassName = 'com.cloudec.hbcs.cassandra.CsMain'
+
+group = 'com.cludec'
+version = '0.0.1'
+
+applicationDefaultJvmArgs = ["-Xmx512m", "-Xms256m"]
+
+repositories {
+  mavenCentral()
+}
+
+compileJava {
+  options.compilerArgs << '-deprecation'
+}
+
+task zip(type: Zip) {
+  from "$buildDir/install/${project.name}"
+  from "$projectDir/../resources"
+}
+
+dependencies {
+  compile project(':hbcs-common')
+  compile 'org.apache.cassandra:cassandra-all:3.11.2'
+  compile 'com.datastax.cassandra:cassandra-driver-core:3.4.0'
+  compile 'com.datastax.cassandra:cassandra-driver-mapping:3.4.0'
+  compile 'com.datastax.cassandra:cassandra-driver-extras:3.4.0'
+  testCompile 'org.codehaus.groovy:groovy:2.4.9'
+  testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
+}

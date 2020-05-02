@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+group = 'com.cloudec'
+version = '0.0.1'
+
+mainClassName = 'com.cloudec.hbcs.hbase.HbMain'
+
+applicationDefaultJvmArgs = ["-Xmx512m", "-Xms256m"]
+
+repositories {
+  mavenCentral()
+}
+
+compileJava {
+  options.compilerArgs << '-deprecation'
+}
+
+task zip(type: Zip) {
+  from "$buildDir/install/${project.name}"
+  from "$projectDir/../resources"
+}
+
+dependencies {
+  // compile 'org.apache.hbase:hbase:1.2.6'
+  compile project(':hbcs-common')
+  compile 'org.apache.hbase:hbase-client:1.2.6'
+  testCompile 'org.codehaus.groovy:groovy:2.4.9'
+  testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
+}

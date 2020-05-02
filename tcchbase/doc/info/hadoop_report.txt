@@ -1,0 +1,64 @@
+Configured Capacity: 920970338304 (857.72 GB)
+Present Capacity: 865381177853 (805.95 GB)
+DFS Remaining: 865380589568 (805.95 GB)
+DFS Used: 588285 (574.50 KB)
+DFS Used%: 0.00%
+Under replicated blocks: 0
+Blocks with corrupt replicas: 0
+Missing blocks: 0
+
+-------------------------------------------------
+Live datanodes (3):
+
+Name: 192.168.1.114:50010 (hbcssrv4)
+Hostname: localhost
+Decommission Status : Normal
+Configured Capacity: 306990112768 (285.91 GB)
+DFS Used: 196095 (191.50 KB)
+Non DFS Used: 18528219649 (17.26 GB)
+DFS Remaining: 288461697024 (268.65 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 93.96%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 9
+Last contact: Thu May 11 20:43:35 BRT 2017
+
+
+Name: 192.168.1.112:50010 (hbcssrv2)
+Hostname: hbcssrv2
+Decommission Status : Normal
+Configured Capacity: 306990112768 (285.91 GB)
+DFS Used: 196095 (191.50 KB)
+Non DFS Used: 18532069889 (17.26 GB)
+DFS Remaining: 288457846784 (268.65 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 93.96%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 9
+Last contact: Thu May 11 20:43:34 BRT 2017
+
+
+Name: 192.168.1.113:50010 (hbcssrv3)
+Hostname: localhost
+Decommission Status : Normal
+Configured Capacity: 306990112768 (285.91 GB)
+DFS Used: 196095 (191.50 KB)
+Non DFS Used: 18528870913 (17.26 GB)
+DFS Remaining: 288461045760 (268.65 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 93.96%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 9
+Last contact: Thu May 11 20:43:34 BRT 2017

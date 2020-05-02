@@ -1,0 +1,8 @@
+disable 'query:q1_post_history_by_postid'
+drop 'query:q1_post_history_by_postid'
+disable 'query:q2_posts_scores_by_userid'
+drop 'query:q2_posts_scores_by_userid'
+disable 'query:q3_posts_by_posthistorytypeid'
+drop 'query:q3_posts_by_posthistorytypeid'
+disable 'query:q4_posts_votes_by_userid'
+drop 'query:q4_posts_votes_by_userid'

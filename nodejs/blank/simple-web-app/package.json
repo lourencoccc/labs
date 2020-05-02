@@ -1,0 +1,16 @@
+{
+  "name": "simple-web-app",
+  "version": "0.0.1",
+  "description": "Simple web app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "lourencoccc",
+  "license": "ISC",
+  "dependencies": { 
+      "mime": "~1.3.4"
+  }
+}

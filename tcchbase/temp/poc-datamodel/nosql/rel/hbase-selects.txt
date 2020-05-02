@@ -1,0 +1,1 @@
+scan 'teste:loja', { FILTER => SingleColumnValueFilter ('nome', '', =, 'Fortaleza', true, false)}

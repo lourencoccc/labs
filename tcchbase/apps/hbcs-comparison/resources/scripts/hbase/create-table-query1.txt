@@ -1,0 +1,1 @@
+create 'query:q1_post_history_by_postid', 'post_history'

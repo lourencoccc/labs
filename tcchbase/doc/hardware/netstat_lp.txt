@@ -1,0 +1,23 @@
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 *:40661                 *:*                     LISTEN      440/rpc.statd   
+tcp        0      0 *:ssh                   *:*                     LISTEN      455/sshd        
+tcp        0      0 *:sunrpc                *:*                     LISTEN      431/rpcbind     
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN      455/sshd        
+tcp6       0      0 [::]:33147              [::]:*                  LISTEN      440/rpc.statd   
+tcp6       0      0 [::]:sunrpc             [::]:*                  LISTEN      431/rpcbind     
+udp        0      0 *:606                   *:*                                 431/rpcbind     
+udp        0      0 localhost:616           *:*                                 440/rpc.statd   
+udp        0      0 *:54077                 *:*                                 440/rpc.statd   
+udp        0      0 *:sunrpc                *:*                                 431/rpcbind     
+udp6       0      0 [::]:606                [::]:*                              431/rpcbind     
+udp6       0      0 [::]:sunrpc             [::]:*                              431/rpcbind     
+udp6       0      0 [::]:39071              [::]:*                              440/rpc.statd   
+Active UNIX domain sockets (only servers)
+Proto RefCnt Flags       Type       State         I-Node   PID/Program name    Path
+unix  2      [ ACC ]     SEQPACKET  LISTENING     8209     1/init              /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     8212     1/init              /run/systemd/journal/stdout
+unix  2      [ ACC ]     STREAM     LISTENING     13621    1/init              /var/run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     13624    1/init              /run/acpid.socket
+unix  2      [ ACC ]     STREAM     LISTENING     12153    431/rpcbind         /run/rpcbind.sock
+unix  2      [ ACC ]     STREAM     LISTENING     2043     1/init              /run/systemd/private

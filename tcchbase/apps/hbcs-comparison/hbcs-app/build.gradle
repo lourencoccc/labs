@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+//apply plugin: 'application'
+
+//mainClassName =  'hbcs.workload.poc.PocPutExample'
+
+group = 'com.cloudec'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+compileJava {
+    options.compilerArgs << '-deprecation'
+}
+
+dependencies {
+
+    testCompile 'org.codehaus.groovy:groovy:2.4.9'
+    testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
+}

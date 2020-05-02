@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Raster POC</title>
+    </head>
+    <body>
+        <center>
+        <div id="content">
+            <canvas id="myCanvas" width="72" height="16" style="border-style: solid; border-width: 1px"></canvas>
+            <br/>
+            <input id="txt" type="text" placeholder="Texto"></input>
+            <br/>
+            <textarea id="pixelsTxt" rows="20" cols="50"></textarea>
+            <canvas id="myCanvasCopy" width="72" height="16" style="border-style: solid; border-width: 1px"></canvas>
+        </div>
+        </center>
+    </body>
+    <script>
+    var canvas = document.getElementById("myCanvas");
+    var canvasCopy = document.getElementById("myCanvasCopy");
+    var ctx = canvas.getContext("2d");
+    var ctxCopy = canvasCopy.getContext("2d");
+    ctx.font = "15px Arial";
+    ctx.fillText("Hello World",0,16);
+
+    document.getElementById("txt").onkeyup = function(){
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.font = "15px Arial";
+        ctx.fillStyle = '#000000';
+        ctx.fillText(this.value, 0,16);
+        var pixels = ctx.getImageData(0,16,canvas.width, canvas.height).data;
+        document.getElementById("pixelsTxt").value =  "";
+        document.getElementById("pixelsTxt").value = utf8ArrayToStr(pixels);
+        //ctxCopy.putImageData(ctx.getImageData(0,0,30, 10), 0, 30);
+
+            drawCopy(ctx.getImageData(0,16,canvas.width, canvas.height), 3)
+    }
+
+    function utf8ArrayToStr(array) {
+        var s = '';
+        for (var i = 0; i < array.length; i++) {
+            var r = array[i+0];
+            var g = array[i+1];
+            var b = array[i+2];
+            var t = array[i+3];
+            if(r == 0 && g == 0 && b == 0){
+                 s += array[i];
+            }
+        }
+        return s;
+    }
+
+    function setPixel(i) {
+      var x = i % 30;
+      var y = Math.floor(i / 30);
+
+      ctxCopy.fillStyle = 'black';
+      ctxCopy.fillRect(x, y, 3, 3);
+    }
+
+    function drawCopy(bitmaps, scale){
+
+			// Each bitmap is an ImageData object.
+			// We loop an CanvasPixelArray object that contains
+			// 4 components (r, g, b, a) for each pixel.
+
+			var data = bitmaps.data;
+			var dataLength = data.length;
+
+			// Clear and draw.
+			ctxCopy.clearRect(0, 0, 400 , 200);
+
+			for (var x = 0; x < bitmaps.width; x++) {
+                for (var y = 0; y < bitmaps.height; y++) {
+    				var index = (x + y * bitmaps.width) * 4;
+    				var r, g, b, a;
+
+    				r = data[index+0];
+    				g = data[index+1];
+    				b = data[index+2];
+    				a = data[index+3];
+
+    				ctxCopy.fillStyle = "rgba("+r+","+g+","+b+","+a+")";
+    				ctxCopy.fillRect(x * scale, y * scale, scale, scale);
+                }
+            }
+
+    }
+
+
+
+
+
+//http://stackoverflow.com/questions/10303114/im-making-an-in-browser-monochrome-led-display-should-i-use-canvas-or-divs
+
+    //TODO adicionar evento no txt para preencher canvas
+    //TODO obter pixels
+    </script>
+</html>

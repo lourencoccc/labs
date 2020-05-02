@@ -1,0 +1,78 @@
+nameSpace: &space normal
+tables:
+#  - name: badges
+#    nameSpace: *space
+#    sourceFile: Badges.xml
+#    keyField: Id
+#    rowKeys:
+#      - Id
+#    cfName: badges
+#    cassandraColumnTypes:
+#  - name: comments
+#    nameSpace: *space
+#    sourceFile: Comments.xml
+#    keyField: Id
+#    rowKeys:
+#      - Id
+#    cfName: comments
+#    cassandraColumnTypes:
+#      comments_Score: int
+  - name: post_history
+    nameSpace: *space
+    sourceFile: PostHistory.xml
+    keyField: Id
+    rowKeys:
+      - Id
+    notEmptyColumns:
+      - PostHistoryTypeId
+      - PostId
+    cfName: post_history
+    cassandraColumnTypes:
+#  - name: post_links
+#    nameSpace: *space
+#    sourceFile: PostLinks.xml
+#    keyField: Id
+#    rowKeys:
+#      - Id
+#    cfName: post_links
+#    cassandraColumnTypes:
+  - name: posts
+    nameSpace: *space
+    sourceFile: Posts.xml
+    keyField: Id
+    rowKeys:
+      - Id
+    notEmptyColumns:
+      - OwnerUserId
+    cfName: posts
+    cassandraColumnTypes:
+      posts_Score: int
+      posts_ViewCount: int
+      posts_AnswerCount: int
+      posts_CommentCount: int
+      posts_FavoriteCount: int
+#  - name: users
+#    nameSpace: *space
+#    sourceFile: Users.xml
+#    keyField: Id
+#    rowKeys:
+#      - Id
+#    cfName: users
+#    cassandraColumnTypes:
+#      users_Age: int
+#      users_Views: int
+#      users_UpVotes: int
+#      users_DownVotes: int
+  - name: votes
+    nameSpace: *space
+    sourceFile: Votes.xml
+    keyField: Id
+    rowKeys:
+      - Id
+    notEmptyColumns:
+      - VoteTypeId
+      - PostId
+      - Id
+    cfName: votes
+    cassandraColumnTypes:
+      votes_BountyAmount: int
