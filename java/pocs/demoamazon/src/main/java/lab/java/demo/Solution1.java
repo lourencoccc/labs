@@ -1,4 +1,4 @@
-package lab.java;
+package lab.java.demo;
 
 //IMPORT LIBRARY PACKAGES NEEDED BY YOUR PROGRAM
 import java.util.Arrays;
